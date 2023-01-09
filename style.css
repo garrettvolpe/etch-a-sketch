@@ -3,13 +3,17 @@
 }
 
 .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .sketchbox {
-    border: black solid 5px;
+    display: grid;
+    border: black solid 1px;
+    margin: auto;
+    width: 50vw;
     height: 50vh;
-    width: 65vw;
+}
+
+.buttons {
+    margin: 15px 0px;
 }
