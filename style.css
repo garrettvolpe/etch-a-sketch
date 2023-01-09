@@ -1,9 +1,20 @@
 #heading {
+    margin: 0;
     text-align: center;
+    font-size: 3.2rem;
+    color: #ffea74;
+}
+
+body {
+    margin-left: 10vw;
+    max-width: 75vw;
 }
 
 .main-container {
     text-align: center;
+    background-color: #d90009;
+    border-radius: 2rem;
+    border: #970007 solid 20px;
 }
 
 .sketchbox {
@@ -12,9 +23,35 @@
     margin: auto;
     width: 60vh;
     height: 60vh;
+    border: black solid 10px;
 }
 
 .buttons,
 #reset {
-    margin: 15px 0px;
+    margin: 5px 0px;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    border: black solid 2px;
+    border-radius: 15%;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.bg-container {
+    background-color: wheat;
+    margin: auto;
+    width: 20vw;
+    border-radius: 15px;
+}
+
+label,
+input {
+    font-size: 2em;
 }

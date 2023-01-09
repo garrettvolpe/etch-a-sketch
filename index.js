@@ -1,7 +1,7 @@
 let startingSize = 16;
 let sizeInput = document.getElementById("sizeInput");
 let mode = document.getElementById("mode");
-let selectedColor;
+let selectedColor = "black";
 
 let clicked = false;
 
