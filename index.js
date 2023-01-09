@@ -1,6 +1,11 @@
 let startingSize = 16;
 let sizeInput = document.getElementById("sizeInput");
 let resetButton = document.getElementById("reset");
+let blackButton = document.getElementById("blackButton");
+let redButton = document.getElementById("redButton");
+let blueButton = document.getElementById("blueButton");
+
+let selectedColor = "black";
 
 function populateSketchBox(size) {
   let sketchBox = document.querySelector(".sketchbox");
@@ -21,7 +26,7 @@ function colorTheSquares() {
   let squares = document.querySelectorAll(".square");
   Array.from(squares).forEach((square) => {
     square.addEventListener("mouseover", function (e) {
-      square.style.backgroundColor = "red";
+      square.style.backgroundColor = selectedColor;
     });
   });
 }
@@ -30,11 +35,27 @@ sizeInput.addEventListener("change", () => {
   populateSketchBox(sizeInput.value);
 });
 
-resetButton.addEventListener("click", () => {
+function resetSketchbox() {
   let squares = document.querySelectorAll(".square");
   Array.from(squares).forEach((square) => {
     square.style.backgroundColor = "gray";
   });
-});
+}
+
+function changeColor(color) {
+  console.log("test");
+  selectedColor = color;
+  resetSketchbox();
+}
 
 populateSketchBox(startingSize);
+resetButton.addEventListener("click", resetSketchbox);
+blackButton.addEventListener("click", () => {
+  changeColor("black");
+});
+redButton.addEventListener("click", () => {
+  changeColor("red");
+});
+blueButton.addEventListener("click", () => {
+  changeColor("blue");
+});
