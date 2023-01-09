@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpeg)
 
 Etch-a-Sketch is a simple drawing tool that allows users to create designs and drawings using only their keyboard.
 
