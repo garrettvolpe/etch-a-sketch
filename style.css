@@ -1,0 +1,15 @@
+#heading {
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sketchbox {
+    border: black solid 5px;
+    height: 50vh;
+    width: 65vw;
+}
