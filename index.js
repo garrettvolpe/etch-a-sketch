@@ -41,21 +41,19 @@ function resetSketchbox() {
     square.style.backgroundColor = "gray";
   });
 }
+function getRandomRGB() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 function changeColor(color) {
-  console.log("test");
+  if (color === "random") {
+    selectedColor = getRandomRGB();
+    return;
+  }
   selectedColor = color;
-  resetSketchbox();
 }
 
 populateSketchBox(startingSize);
-resetButton.addEventListener("click", resetSketchbox);
-blackButton.addEventListener("click", () => {
-  changeColor("black");
-});
-redButton.addEventListener("click", () => {
-  changeColor("red");
-});
-blueButton.addEventListener("click", () => {
-  changeColor("blue");
-});

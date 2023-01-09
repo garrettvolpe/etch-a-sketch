@@ -10,10 +10,11 @@
     display: grid;
     border: black solid 1px;
     margin: auto;
-    width: 50vw;
-    height: 50vh;
+    width: 60vh;
+    height: 60vh;
 }
 
-.buttons {
+.buttons,
+#reset {
     margin: 15px 0px;
 }
