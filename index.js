@@ -1,11 +1,9 @@
 let startingSize = 16;
 let sizeInput = document.getElementById("sizeInput");
-let resetButton = document.getElementById("reset");
-let blackButton = document.getElementById("blackButton");
-let redButton = document.getElementById("redButton");
-let blueButton = document.getElementById("blueButton");
+let mode = document.getElementById("mode");
+let selectedColor;
 
-let selectedColor = "black";
+let clicked = false;
 
 function populateSketchBox(size) {
   let sketchBox = document.querySelector(".sketchbox");
@@ -26,7 +24,9 @@ function colorTheSquares() {
   let squares = document.querySelectorAll(".square");
   Array.from(squares).forEach((square) => {
     square.addEventListener("mouseover", function (e) {
-      square.style.backgroundColor = selectedColor;
+      if (clicked) {
+        square.style.backgroundColor = selectedColor;
+      }
     });
   });
 }
@@ -56,4 +56,16 @@ function changeColor(color) {
   selectedColor = color;
 }
 
+mode.style.color = "red";
+mode.innerText = "Not Drawing";
 populateSketchBox(startingSize);
+document.querySelector(".sketchbox").addEventListener("click", () => {
+  clicked = !clicked;
+  if (clicked) {
+    mode.style.color = "green";
+    mode.innerText = "Drawing!";
+  } else {
+    mode.style.color = "red";
+    mode.innerText = "Not Drawing";
+  }
+});
